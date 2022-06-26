@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Week 4 | Javascript | Responsive Form Exercise</title>
+
+    <link rel="stylesheet" href="style.css">
+
+     <!----------------- Bootstrap CSS -------------->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+
+     <!--------- Bootstrap Bundle with Popper ------->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+      <!------------ Navigation  Bar--------------------->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">AMAZON KINDLE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">BOOKS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CATEGORIES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">TODAY'S DEALS</a>
+          </li> <li class="nav-item">
+            <a class="nav-link" href="#">CUSTOMER SERVICE</a>
+          </li>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button"href="#">Settings</a>
+          <li class="nav-item dropdown">
+           <ul class="dropdown-menu">
+               <li><a class="dropdown-item" href="#">Profile Settings</a></li> 
+               <li><a class="dropdown-item" href="#">Change Password</a></li> <li><a class="dropdown-item" href="#">Logout</a></li> 
+           </ul>
+           </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+    <form action="#" method="">
+        <div class="container-fluid bg-dark text-light p-5">
+            <div class="container bg-dark p-5">
+                
+                <div class="p-3 bg-dark bg-opacity-10 border border-light  text-center">
+          <h1 class="header" id="header">Payment Method</h1>
+
+        </div>
+    </div>
+</div>
+<div class="container container-fluid">
+    <div class="border border-dark m-lg-5 p-lg-5">
+    <form class="form-floating">
+        <div class="mb-2">
+                        <label for="name" class="label">Name:</label>
+                        <input type="text" class="placeholder col-12 placeholder-lg" id="fullname" name="fullname" placeholder="Please enter your name">
+         </div>
+         <div class="mb-1">
+                        <label for="address" class="label">Address:</label>
+                        <input type="text" class="placeholder col-12 placeholder-lg" id="address" name="address" placeholder="Please enter your address">
+         </div>
+         <div class="mb-2">
+                    <label for="email" class="label">Email:</label>
+                   <input type="text" class="placeholder col-12 placeholder-lg" id="email" name="email" placeholder="Please enter your email address">
+         </div>
+         <div class="mb-2">
+                <label for="cpnumber" class="label">Contact Number:</label>
+                <input type="text" class="placeholder col-12 placeholder-lg" id="cpnumber" name="cpnumber" placeholder="Please enter you contact details">
+         </div>
+         <div class="mb-2">
+        
+                        <label class="country" for="country">Country:</label>
+                        <select class="form-select form-select-sm" id="country" name="country" onchange="chooseCountry()">
+                            <option  value="">Select your country</option>
+                            <option  value="Albania">Albania</option>
+                            <option  value="Andorra">Andorra</option>
+                            <option  value="Armenia">Armenia</option>
+    
+                        </select>
+                    </div>
+              
+                    <div class="clearfix"></div>
+      
+                    <div class="container-fluid">
+                       <div class="border border-dark m-lg-5 p-lg-5">
+                   <div class="mb-2 text-center">
+
+                    <label for="contactnumber" class="form-label">Payment Options:</label>
+                    
+                    </div>
+                    
+                    <div class="d-grid col-12 mx-auto align-center">
+
+    
+
+
+                <div class="form-check mb-2">
+                         <div class="form-check form-check-inline">
+                    <input type="radio" id="mcard" name="pmtmethod" value="Master Card">
+                    <label for="mcard" id="mcard">Master Card (With 5% discount)</label><br>
+                </div>
+            </div>
+        
+        
+            <div class="form-check mb-2">
+                <div class="form-check form-check-inline">
+                    <input type="radio" id="visa" name="pmtmethod" value="Visa" >
+                    <label for="visa" id="visa">Visa (With 10% discount)</label><br>
+                </div>
+            </div> 
+
+            <div class="form-check mb-2">
+                <div class="form-check form-check-inline">
+                    <input type="radio" id="visa" name="pmtmethod" value="American Express">
+                    <label for="amex" id="visa">American Express</label><br>
+                </div>
+            </div> 
+
+            <div class="form-check mb-2">
+                <div class="form-check form-check-inline">
+                    <input type="radio" id="cod" name="pmtmethod" value="Cash on Delivery">
+                    <label for="cod" id="cod">Cash on Delivery</label><br>
+                </div>
+            </div> 
+    
+
+            <div class="d-grid gap-4 col-6 mx-auto">
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="getForm()">
+                        Place Order
+                 </button>
+         </div>
+            
+       </table> 
+   </form> 
+
+
+
+
+
+
+  
+   <!-------------- Modal ---------------->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Payment Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h1 id="displayName1"></h1>
+            <h1 id="displayName2"></h1>
+            <h1 id="displayName3"></h1>
+            <h1 id="displayName4"></h1>
+            <h1 id="displayName5"></h1>
+            <h1 id="displayName6"></h1>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-danger">Pay</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <script>
+
+            function getForm() {
+                let fullName = document.getElementById("fullname").value;
+                document.getElementById("displayName1").innerHTML = fullName;
+            
+                let address = document.getElementById("address").value;
+                document.getElementById("displayName2").innerHTML = address;
+
+
+                let email = document.getElementById("email").value;
+                document.getElementById("displayName3").innerHTML = email;
+
+                let cellNumber = document.getElementById("cpnumber").value;
+                document.getElementById("displayName4").innerHTML = cellNumber;
+
+                document.getElementById("displayName6").innerHTML = chooseRadio();
+            }
+
+
+            function chooseCountry() {
+                 let selectCountry = document.getElementById("country").value;
+                 document.getElementById("displayName5").innerHTML = selectCountry;
+           }
+
+
+           function chooseRadio() {
+                let selectRadio = document.querySelector("input[name='pmtmethod']:checked").value;
+                return selectRadio;
+               
+           }
+    </script>
+</body>
+</html>
